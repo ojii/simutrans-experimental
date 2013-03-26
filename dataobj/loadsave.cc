@@ -27,9 +27,7 @@
 #define LS_BUF_SIZE (1024*1024)
 
 #if MULTI_THREAD>1
-// enable barriers by this
-#define _XOPEN_SOURCE 600
-#include <pthread.h>
+#include "../utils/threading.h"
 
 static pthread_t ls_thread;
 static pthread_barrier_t loadsave_barrier;

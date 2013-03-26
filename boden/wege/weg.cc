@@ -46,7 +46,7 @@
 #include "../../dings/wayobj.h"
 
 #if MULTI_THREAD>1
-#include <pthread.h>
+#include "../../utils/threading.h"
 static pthread_mutex_t weg_calc_bild_mutex = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
 #endif
 
