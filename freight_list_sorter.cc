@@ -15,7 +15,14 @@
 #include "utils/cbuffer_t.h"
 
 // Necessary for MinGW
+#ifdef __MINGW32__
+#include "malloc.h"
+#endif
+
+// Necessary for OSX
+#ifdef __APPLE__
 #include "malloc/malloc.h"
+#endif
 
 
 karte_t *freight_list_sorter_t::welt = NULL;
