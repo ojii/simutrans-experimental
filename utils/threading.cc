@@ -1,10 +1,8 @@
 #include "threading.h"
 
-#ifndef _POSIX_BARRIERS
-
 #include <errno.h>
 
-int pthread_barrier_init(pthread_barrier_t *barrier, const pthread_barrierattr_t *attr, unsigned int count)
+int barrier_init(pthread_barrier_t *barrier, const pthread_barrierattr_t *attr, unsigned int count)
 {
     if(count == 0)
     {
@@ -51,5 +49,3 @@ int pthread_barrier_wait(pthread_barrier_t *barrier)
         return 0;
     }
 }
-
-#endif

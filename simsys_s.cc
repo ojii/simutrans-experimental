@@ -101,7 +101,7 @@ static SDL_Cursor* blank;
 #if MULTI_THREAD>1
 // enable barriers by this
 #define _XOPEN_SOURCE 600
-#include <pthread.h>
+#include "utils/threading.h" 
 
 static pthread_barrier_t redraw_barrier;
 static pthread_mutex_t redraw_mutex = PTHREAD_MUTEX_INITIALIZER;
