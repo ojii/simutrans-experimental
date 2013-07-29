@@ -122,6 +122,7 @@ endif
 
 ifneq  ($(MULTI_THREAD),)
   CFLAGS += -DMULTI_THREAD=$(MULTI_THREAD)
+  SOURCES += utils/threading.cc
   ifneq  ($(MULTI_THREAD),1)
     ifeq ($(OSTYPE),mingw)
 #use lpthreadGC2d for debug alternatively

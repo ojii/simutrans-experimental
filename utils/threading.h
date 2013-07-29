@@ -12,16 +12,16 @@
 #endif
 
 // add pthread barrier support for OSX
+typedef int pthread_barrierattr_t;
 typedef struct {
-    int needed;
-    int called;
+    int count;
+    int tripCount;
     pthread_mutex_t mutex;
     pthread_cond_t cond;
 } pthread_barrier_t;
 
 // needed because our signature doesn't match the one from pthread_barrier_init(3)
-#define pthread_barrier_init(b,a,n) barrier_init(b,n)
-int barrier_init(pthread_barrier_t *barrier, int needed);
+int pthread_barrier_init(pthread_barrier_t *barrier, const pthread_barrierattr_t *attr, unsigned int count);
 int pthread_barrier_destroy(pthread_barrier_t *barrier);
 int pthread_barrier_wait(pthread_barrier_t *barrier); 
 
