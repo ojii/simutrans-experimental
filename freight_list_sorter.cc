@@ -15,7 +15,7 @@
 #include "utils/cbuffer_t.h"
 
 // Necessary for MinGW
-#include "malloc.h"
+#include "malloc/malloc.h"
 
 
 karte_t *freight_list_sorter_t::welt = NULL;
