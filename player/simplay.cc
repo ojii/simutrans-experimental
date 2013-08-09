@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1997 - 2001 Hansjörg Malthaner
+ * Copyright (c) 1997 - 2001 Hansjï¿½rg Malthaner
  *
  * This file is part of the Simutrans project under the artistic licence.
  * (see licence.txt)
@@ -58,7 +58,7 @@
 karte_t *spieler_t::welt = NULL;
 
 #if MULTI_THREAD>1
-#include <pthread.h>
+#include "../utils/simthread.h"
 static pthread_mutex_t laden_abschl_mutex = PTHREAD_MUTEX_INITIALIZER;
 #endif
 
@@ -354,7 +354,7 @@ void spieler_t::step()
 {
 	/*
 	NOTE: This would need updating to the new FOR iterators to work now.
-	// die haltestellen müssen die Fahrpläne rgelmaessig pruefen
+	// die haltestellen mï¿½ssen die Fahrplï¿½ne rgelmaessig pruefen
 	uint8 i = (uint8)(welt->get_steps()+player_nr);
 	//slist_iterator_tpl <nearby_halt_t> iter( halt_list );
 	//while(iter.next()) {
@@ -902,8 +902,8 @@ void spieler_t::rotate90( const sint16 y_size )
 
 
 /**
- * Rückruf, um uns zu informieren, dass ein Vehikel ein Problem hat
- * @author Hansjörg Malthaner
+ * Rï¿½ckruf, um uns zu informieren, dass ein Vehikel ein Problem hat
+ * @author Hansjï¿½rg Malthaner
  * @date 26-Nov-2001
  */
 void spieler_t::bescheid_vehikel_problem(convoihandle_t cnv,const koord3d ziel)

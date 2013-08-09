@@ -167,7 +167,7 @@ stringhashtable_tpl<karte_t::missing_level_t>missing_pak_names;
 #if MULTI_THREAD>1
 // enable barriers by this
 #define _XOPEN_SOURCE 600
-#include <pthread.h>
+#include "utils/simthread.h"
 #include <semaphore.h>
 
 // to start a thread

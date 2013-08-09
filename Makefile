@@ -121,6 +121,7 @@ ifneq ($(PROFILE),)
 endif
 
 ifneq  ($(MULTI_THREAD),)
+  SOURCES += utils/simthread.h
   CFLAGS += -DMULTI_THREAD=$(MULTI_THREAD)
   ifneq  ($(MULTI_THREAD),1)
     ifeq ($(OSTYPE),mingw)

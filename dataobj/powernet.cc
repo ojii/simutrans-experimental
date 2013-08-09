@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1997 - 2003 Hansjörg Malthaner
+ * Copyright (c) 1997 - 2003 Hansjï¿½rg Malthaner
  *
  * This file is part of the Simutrans project under the artistic licence.
  * (see licence.txt)
@@ -9,7 +9,7 @@
 #include "powernet.h"
 
 #if MULTI_THREAD>1
-#include <pthread.h>
+#include "../utils/simthread.h"
 static pthread_mutex_t netlist_mutex = PTHREAD_MUTEX_INITIALIZER;
 #endif
 

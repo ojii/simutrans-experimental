@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1997 - 2001 Hansjörg Malthaner
+ * Copyright (c) 1997 - 2001 Hansjï¿½rg Malthaner
  *
  * This file is part of the Simutrans project under the artistic license.
  */
@@ -101,9 +101,9 @@ static SDL_Cursor* blank;
 #if MULTI_THREAD>1
 // enable barriers by this
 #define _XOPEN_SOURCE 600
-#include <pthread.h>
+#include "utils/simthread.h"
 
-static pthread_barrier_t redraw_barrier;
+static simthread_barrier_t redraw_barrier;
 static pthread_mutex_t redraw_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 // parameters passed starting a thread

@@ -25,7 +25,7 @@
 #include "crossing.h"
 
 #if MULTI_THREAD>1
-#include <pthread.h>
+#include "../utils/simthread.h"
 static pthread_mutex_t crossing_logic_mutex = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
 #endif
 
@@ -173,7 +173,7 @@ void crossing_t::rdwr(loadsave_t *file)
 
 
 /**
- * Wird nach dem Laden der Welt aufgerufen - üblicherweise benutzt
+ * Wird nach dem Laden der Welt aufgerufen - ï¿½blicherweise benutzt
  * um das Aussehen des Dings an Boden und Umgebung anzupassen
  *
  * @author Hj. Malthaner

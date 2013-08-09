@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1997 - 2001 Hansjörg Malthaner
+ * Copyright (c) 1997 - 2001 Hansjï¿½rg Malthaner
  *
  * This file is part of the Simutrans project under the artistic licence.
  * (see licence.txt)
@@ -26,7 +26,7 @@
 #include "label.h"
 
 #if MULTI_THREAD>1
-#include <pthread.h>
+#include "../utils/simthread.h"
 static pthread_mutex_t add_label_mutex = PTHREAD_MUTEX_INITIALIZER;
 #endif
 

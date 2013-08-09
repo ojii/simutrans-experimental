@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 Hansjörg Malthaner
+ * Copyright (c) 2001 Hansjï¿½rg Malthaner
  *
  * This file is part of the Simutrans project under the artistic license.
  */
@@ -43,11 +43,11 @@ static const sint8 hours2night[] =
 #if MULTI_THREAD>1
 // enable barriers by this
 #define _XOPEN_SOURCE 600
-#include <pthread.h>
+#include "utils/simthread.h"
 
 bool spawned_threads=false; // global job indicator array
-static pthread_barrier_t display_barrier_start;
-static pthread_barrier_t display_barrier_end;
+static simthread_barrier_t display_barrier_start;
+static simthread_barrier_t display_barrier_end;
 
 // to start a thread
 typedef struct{

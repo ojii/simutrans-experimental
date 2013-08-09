@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1997 - 2001 Hansjörg Malthaner
+ * Copyright (c) 1997 - 2001 Hansjï¿½rg Malthaner
  *
  * This file is part of the Simutrans project under the artistic licence.
  * (see licence.txt)
@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #if MULTI_THREAD>1
-#include <pthread.h>
+#include "../utils/simthread.h"
 static pthread_mutex_t verbinde_mutex = PTHREAD_MUTEX_INITIALIZER;
 static pthread_mutex_t calc_bild_mutex = PTHREAD_MUTEX_INITIALIZER;
 static pthread_mutex_t pumpe_list_mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -366,7 +366,7 @@ void print_power(cbuffer_t & buf, uint64 power_in_kW, const char *fmt_MW, const 
 
 
 /**
- * @return Einen Beschreibungsstring für das Objekt, der z.B. in einem
+ * @return Einen Beschreibungsstring fï¿½r das Objekt, der z.B. in einem
  * Beobachtungsfenster angezeigt wird.
  * @author Hj. Malthaner
  */
@@ -388,7 +388,7 @@ void leitung_t::info(cbuffer_t & buf, bool dummy) const
 
 
 /**
- * Wird nach dem Laden der Welt aufgerufen - üblicherweise benutzt
+ * Wird nach dem Laden der Welt aufgerufen - ï¿½blicherweise benutzt
  * um das Aussehen des Dings an Boden und Umgebung anzupassen
  *
  * @author Hj. Malthaner
